@@ -1,0 +1,2 @@
+# TalkingDataSDK
+TalkingData pod
