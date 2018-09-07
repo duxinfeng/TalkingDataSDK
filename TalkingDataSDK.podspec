@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TalkingDataSDK"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "基于TalkingData AppAnalytics AdTracking 两个服务的SDK制作Pod."
   s.homepage     = "https://github.com/duxinfeng/TalkingDataSDK"
   s.license      = "MIT"
