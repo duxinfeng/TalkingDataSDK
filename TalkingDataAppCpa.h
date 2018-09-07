@@ -68,6 +68,12 @@
 + (void)setVerboseLogDisabled;
 
 /**
+ *  @method backgroundSessionEnabled
+ *  开启后台使用时长统计，需在SDK初始化之前调用。
+ */
++ (void)backgroundSessionEnabled;
+
+/**
  *  @method enableSFSafariViewControllerTracking 用于精准的追踪以Safari作为资源载体的广告来源  如果需要使用应当在init方法之前调用
  */
 + (void)enableSFSafariViewControllerTracking NS_DEPRECATED_IOS(10_0, NA, "此方法会影响到用户交互，使用前请确保和产品、业务沟通清楚!");
