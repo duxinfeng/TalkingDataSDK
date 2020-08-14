@@ -4,10 +4,18 @@ TalkingData Pod
 ```
 target 'demo' do
 
-	pod 'TalkingDataSDK', '~> 1.0.2'
+	pod 'TalkingDataSDK', '~> 1.1.0'
 
 end
 ```
+
+
+v 1.0.2版本：
+
+移除 `AdTracking` 只包含 `App Analytics` SDK版本 v4.0.54
+
+
+
 v 1.0.2版本：
 
 1、升级、精简业务SDK
@@ -15,6 +23,8 @@ v 1.0.2版本：
 2、TalkingData AppAnalytics SDK 更新到 v4.0.26 ,只包含 `App Analytics基础功能`业务 
 
 3、TalkingData AdTracking SDK 更新到 v4.0.26 ,只包含 `移动广告监测基础功能`业务 
+
+
 
 
 v1.0.1版本：

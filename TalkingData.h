@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 #if TARGET_OS_IOS
 typedef NS_ENUM(NSUInteger, TDAccountType) {
     TDAccountTypeAnonymous      = 0,    // 匿名账户
@@ -32,12 +33,6 @@ typedef NS_ENUM(NSUInteger, TDAccountType) {
 
 
 
-// 以下枚举用于WatchApp页面追踪
-typedef enum {
-    TDPageTypeGlance = 1,
-    TDPageTypeNotification = 2,
-    TDPageTypeWatchApp = 3
-} TDPageType;
 
 @interface TalkingData: NSObject
 
@@ -59,7 +54,7 @@ typedef enum {
 /**
  *  @method setExceptionReportEnabled
  *  是否捕捉程序崩溃记录（可选）
-    如果需要记录程序崩溃日志，请将值设成YES，并且在初始化后尽早调用
+ *  如果需要记录程序崩溃日志，请将值设成YES，并且在初始化后尽早调用
  *  @param  enable      默认是 NO
  */
 + (void)setExceptionReportEnabled:(BOOL)enable;
@@ -67,11 +62,12 @@ typedef enum {
 /**
  *  @method setSignalReportEnabled
  *  是否捕捉异常信号（可选）
-    如果需要开启异常信号捕捉功能，请将值设成YES，并且在初始化后尽早调用
+ *  如果需要开启异常信号捕捉功能，请将值设成YES，并且在初始化后尽早调用
  *  @param  enable      默认是NO
  */
 + (void)setSignalReportEnabled:(BOOL)enable;
 #endif
+
 
 
 #if TARGET_OS_IOS
@@ -92,7 +88,7 @@ typedef enum {
 
 #if TARGET_OS_IOS
 /**
- *  @method	sessionStarted:withChannelId:
+ *  @method sessionStarted:withChannelId:
  *  初始化统计实例，请在application:didFinishLaunchingWithOptions:方法里调用
  *  @param  appKey      应用的唯一标识，统计后台注册得到
  *  @param  channelId   渠道名，如“app store”（可选）
@@ -102,6 +98,13 @@ typedef enum {
 
 
 
+
+/**
+ *  @method setAccountId:
+ *  设置帐户ID
+ *  @param  accountId   账户ID
+ */
++ (void)setAccountId:(NSString *)accountId API_DEPRECATED("", ios(1, 1));
 
 #if TARGET_OS_IOS
 /**
